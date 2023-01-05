@@ -213,11 +213,198 @@ include('config.php');
                             </div>
                         </div>
                     </div>
-
-                    <!-- Recent Property END-->
-
                 </div>
+
+                <!-- Recent Property END-->
+                <!--	Why Choose Us -->
+                <div class="full-row living bg-one overlay-secondary-half" style="background-image: url('images/haddyliving.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="living-list pr-4">
+                                    <h3 class="pb-4 mb-3 text-white">Why Choose Us</h3>
+                                    <ul>
+                                        <li class="mb-4 text-white d-flex">
+                                            <i class="flaticon-reward flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
+                                            <div class="pl-2">
+                                                <h5 class="mb-3">Experience Quality</h5>
+                                                <p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
+                                            </div>
+                                        </li>
+                                        <li class="mb-4 text-white d-flex">
+                                            <i class="flaticon-real-estate flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
+                                            <div class="pl-2">
+                                                <h5 class="mb-3">Experience Quality</h5>
+                                                <p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
+                                            </div>
+                                        </li>
+                                        <li class="mb-4 text-white d-flex">
+                                            <i class="flaticon-seller flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
+                                            <div class="pl-2">
+                                                <h5 class="mb-3">Experience Quality</h5>
+                                                <p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--	why choose us -->
+
+                <!--	How it work -->
+                <div class="full-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2 class="text-secondary double-down-line text-center mb-5">How It Work</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="icon-thumb-one text-center mb-5">
+                                    <div class="bg-primary text-white rounded-circle position-absolute z-index-9">1</div>
+                                    <div class="left-arrow"><i class="flaticon-investor flat-medium icon-primary" aria-hidden="true"></i></div>
+                                    <h5 class="text-secondary mt-5 mb-4">Discussion</h5>
+                                    <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-thumb-one text-center mb-5">
+                                    <div class="bg-primary text-white rounded-circle position-absolute z-index-9">2</div>
+                                    <div class="left-arrow"><i class="flaticon-search flat-medium icon-primary" aria-hidden="true"></i></div>
+                                    <h5 class="text-secondary mt-5 mb-4">Files Review</h5>
+                                    <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-thumb-one text-center mb-5">
+                                    <div class="bg-primary text-white rounded-circle position-absolute z-index-9">3</div>
+                                    <div><i class="flaticon-handshake flat-medium icon-primary" aria-hidden="true"></i></div>
+                                    <h5 class="text-secondary mt-5 mb-4">Acquire</h5>
+                                    <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--	How It Work END -->
+                <div class="full-row overlay-secondary" style="background-image: url(images/counterbg.jpg); background-size: cover; background-position : center center; background-repeat : no-repeat;">
+                    <div class="container">
+                        <div class="fact-counter">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="count wow text-center mb-sm-50" data-wow-duration="300">
+                                        <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+                                        <?php
+                                        $query = mysqli_query($con, "SELECT count(pid) FROM property");
+                                        while ($row = mysqli_fetch_array($query)) {
+                                            echo '<div class="count_num text-primary my-4" data-speed="3000" data-stop="' . $row[0] . '">0</div>';
+                                        }
+                                        ?>
+                                        <div class="text-white">
+                                            <h5>Property Available</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="count wow text-center mb-sm-50" data-wow-duration="300">
+                                        <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+                                        <?php
+                                        $query = mysqli_query($con, "SELECT count(pid) FROM property WHERE stype = 'sale'");
+                                        while ($row = mysqli_fetch_array($query)) {
+                                            echo '<div class="count_num text-primary my-4" data-speed="3000" data-stop="' . $row[0] . '">0</div>';
+                                        }
+                                        ?>
+                                        <div class="text-white">
+                                            <h5>Sale Property Available</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="count wow text-center mb-sm-50" data-wow-duration="300">
+                                        <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+                                        <?php
+                                        $query = mysqli_query($con, "SELECT count(pid) FROM property WHERE stype = 'rend'");
+                                        while ($row = mysqli_fetch_array($query)) {
+                                            echo '<div class="count_num text-primary my-4" data-speed="3000" data-stop="' . $row[0] . '">0</div>';
+                                        }
+                                        ?>
+                                        <div class="text-white">
+                                            <h5>Rent Property Available</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="count wow text-center mb-sm-50" data-wow-duration="300">
+                                        <i class="flaticon-man flat-large text-white" aria-hidden="true"></i>
+                                        <?php
+                                        $query = mysqli_query($con, "SELECT count(uid) FROM user");
+                                        while ($row = mysqli_fetch_array($query)) {
+                                            echo '<div class="count_num text-primary my-4" data-speed="3000" data-stop="' . $row[0] . '">0</div>';
+                                        }
+                                        ?>
+                                        <div class="text-white">
+                                            <h5>Registered Users</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Les villes les plus populaires -->
+
+                <div>Developpement In Progress</div>
+
+                <!-- Les villes les plus populaires END -->
+                
+                <!-- Testimoniale start -->
+                <div class="full-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="content-sidebar p-4">
+                                    <div class="mb-3 col-lg-12">
+                                        <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4">Testimoniale</h4>
+                                        <div class="recent-review owl-carousel owl-dots-gray owl-dots-hover-primary">
+                                            <?php
+                                            //on à besoin de tous les feedbacks associés à un user où le feedback à été validé par l'admin
+                                            $query = mysqli_query($con, "SELECT feedback.*,user.* 
+                                                                            FROM feedback, user 
+                                                                                WHERE feedback.uid = user.uid 
+                                                                                    AND feedback.status = 1");
+                                            while($row = mysqli_fetch_array($query)){
+                                            ?>
+                                            <div class="item">
+                                                <div class="p-4 bg-primary down-angle-white position-relative">
+                                                    <p class="text-white">
+                                                        <i class="fas fa-quote-left mr-2 text-white"></i>
+                                                        <?php
+                                                        echo $row['2'];
+                                                        ?>
+                                                        <i class="fas fa-quote-right mr-2 text-white"></i>
+                                                    </p>
+                                                </div>
+                                                <div class="p-2 mt-4">
+                                                    <span class="text-primary d-table text-capitalize"></span>
+                                                    <span class="text-capitalize"></span>
+                                                </div>
+                                            </div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimoniale end -->
+
             </div>
+        </div>
 
 
 
