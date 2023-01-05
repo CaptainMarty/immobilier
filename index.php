@@ -161,6 +161,15 @@
                             <div class="tab-content mt-4" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                     <div class="row">
+
+                                    <!-- on va afficher nos propriétées immobilières récentes -->
+                                    <?php
+                                        $sql = "SELECT property.*, user.uname, user.utype, user.uimage 
+                                                    FROM `property`, `user` 
+                                                        WHERE property.uid = user.uid
+                                                            ORDER BY date DESC limit 6";
+                                        $query = mysqli_query($con, $sql);
+                                    ?>
                                     </div>
                                 </div>
                             </div>
